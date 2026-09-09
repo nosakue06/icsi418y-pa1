@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- purpose: this tells the browser how to interpret characters -->
+    <meta charset="UTF-8">
+
+    <!-- purpose: this helps the page display correctly on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- purpose: this connects the HTML page to the CSS file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Interactive Task Management Page</title>    
+</head>  
+
+<body>
+
+    <!-- purpose: the main container holds the entire application-->
+    <main class="container">
+        
+        <header>
+            <h1> Interactive Task Management Page</h1>
+        </header>
+
+        <!-- purpose: this form allows the user to:
+             1. enter a task
+             2. choose a priority
+             3. submit the task
+        -->
+        <form id ="task-form">
+            <label for ="task-input">Task:</label>
+            <input
+                type="text"
+                id="task-input"
+                placeholder="Enter a task..."
+            > 
+
+            <label for="priority">Priority:</label>
+
+            <!-- purpose: it's to enable the required priority choices-->
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+
+        </form>
+
+        <!-- 
+           purpose: for javascript to place an error message here
+                    if the user tries to submit an empty task.
+        -->
+        
+        <p id="message"></p>
+        
+        <!-- 
+            purpose: javascript dynamically adds task items
+                     inside this unordered list.
+        --> 
+        <ul id="task-list"></ul>
+   
+    </main>
+
+    <!-- purpose: this connects the HTML page to the JavaScript file-->
+    <script src="script.js"></script>
+
+</body>
+</html>

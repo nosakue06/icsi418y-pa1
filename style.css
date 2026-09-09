@@ -1,0 +1,163 @@
+/* 
+  purpose: the universal selector (*) applies these rules 
+  to every element on the page.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family:
+        'Lucida Sans', 
+        'Lucida Sans Regular', 
+        'Lucida Grande', 
+        'Lucida Sans Unicode', 
+        Geneva, 
+        Verdana, 
+        sans-serif;
+}
+
+/* 
+ purpose: it styles the entire webpage 
+*/
+body{
+    background-color: #6799ab;
+    padding: 20px;
+}
+
+/* 
+ purpose: it centers the application and limits its width 
+*/
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 
+ purpose: it adds space underneath the main title 
+*/
+h1 {
+    margin-bottom: 2rem;
+}
+
+/* 
+ purpose: it gives form controls similar styling 
+*/
+
+input,
+select,
+button {
+    outline: none;
+    border: none;
+
+    font-family: inherit;
+
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    background-color: #f1f1f1;
+
+    font-weight: 600;
+
+   
+    margin-bottom: 1rem;
+    margin-right: 5px;
+
+}
+
+/* 
+ purpose: it makes buttons clearly clickable 
+*/
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 
+ purpose: it changes a button when the mouse is over it 
+*/
+button:hover {
+    background-color: #6b6969;
+    color: white;
+}
+
+/* 
+  purpose: it styles for each individual task that 
+           JavaScript adds to the page 
+*/
+  
+
+.task-item {
+    max-width: 600px;
+
+    margin: 10px 0;
+    padding: 10px;
+
+    background-color: white;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    animation: animateIn 0.3s ease;
+}
+
+/* 
+  purpose: it gives the task information some spacing
+           before the buttons
+*/
+
+.task-info {
+    margin-right: 10px;
+}
+
+/*
+ purpose: it makes the completed tasks visibly different.
+*/ 
+
+.completed{
+    text-decoration: line-through;
+    background-color: chartreuse;
+}
+
+/*
+ purpose: it allows different classes priority levels to look different.
+*/
+
+.low-priority {
+    border-left: 6px solid green;
+}
+
+.medium-priority {
+    border-left: 6px solid orange;
+}
+
+.high-priority {
+    border-left: 6px solid red;
+}
+
+/* 
+ purpose: it styles the message used for empty-task errors
+*/
+#message {
+    margin-bottom: 10px;
+    font-weight: bold;
+} 
+
+/*
+ purpose: its animation that makes a newly created task slide onto the screen.
+*/ 
+
+@keyframes animateIn {
+    
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    } 
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
